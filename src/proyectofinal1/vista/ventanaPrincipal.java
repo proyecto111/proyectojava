@@ -189,22 +189,22 @@ public class ventanaPrincipal extends javax.swing.JFrame {
 
         tarjetas.setBackground(new java.awt.Color(255, 255, 255));
 
-        rSButtonMetro1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectofinal1/vista/viaje200.png"))); // NOI18N
+        rSButtonMetro1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectofinal1/recursos/img/viaje200.png"))); // NOI18N
         rSButtonMetro1.setOpaque(false);
 
-        tarjetaProduccion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectofinal1/vista/insumos200.png"))); // NOI18N
+        tarjetaProduccion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectofinal1/recursos/img/insumos200.png"))); // NOI18N
         tarjetaProduccion.setOpaque(false);
 
-        tarjetaGastos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectofinal1/vista/gastos200.png"))); // NOI18N
+        tarjetaGastos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectofinal1/recursos/img/gastos200.png"))); // NOI18N
         tarjetaGastos.setOpaque(false);
 
-        tarjetaInsumos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectofinal1/vista/insum200.png"))); // NOI18N
+        tarjetaInsumos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectofinal1/recursos/img/insum200.png"))); // NOI18N
         tarjetaInsumos.setOpaque(false);
 
-        rSButtonMetro11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectofinal1/vista/configuracion200.png"))); // NOI18N
+        rSButtonMetro11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectofinal1/recursos/img/configuracion200.png"))); // NOI18N
         rSButtonMetro11.setOpaque(false);
 
-        rSButtonMetro12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectofinal1/vista/estadisticas200.png"))); // NOI18N
+        rSButtonMetro12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectofinal1/recursos/img/estadisticas200.png"))); // NOI18N
         rSButtonMetro12.setOpaque(false);
 
         javax.swing.GroupLayout tarjetasLayout = new javax.swing.GroupLayout(tarjetas);

@@ -382,7 +382,7 @@
                 <Component class="proyectofinal1.recursos.rsbuttom.RSButtonMetro" name="rSButtonMetro1">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/proyectofinal1/vista/viaje200.png"/>
+                      <Image iconType="3" name="/proyectofinal1/recursos/img/viaje200.png"/>
                     </Property>
                     <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
@@ -390,7 +390,7 @@
                 <Component class="proyectofinal1.recursos.rsbuttom.RSButtonMetro" name="tarjetaProduccion">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/proyectofinal1/vista/insumos200.png"/>
+                      <Image iconType="3" name="/proyectofinal1/recursos/img/insumos200.png"/>
                     </Property>
                     <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
@@ -398,7 +398,7 @@
                 <Component class="proyectofinal1.recursos.rsbuttom.RSButtonMetro" name="tarjetaGastos">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/proyectofinal1/vista/gastos200.png"/>
+                      <Image iconType="3" name="/proyectofinal1/recursos/img/gastos200.png"/>
                     </Property>
                     <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
@@ -409,7 +409,7 @@
                 <Component class="proyectofinal1.recursos.rsbuttom.RSButtonMetro" name="tarjetaInsumos">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/proyectofinal1/vista/insum200.png"/>
+                      <Image iconType="3" name="/proyectofinal1/recursos/img/insum200.png"/>
                     </Property>
                     <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
@@ -420,7 +420,7 @@
                 <Component class="proyectofinal1.recursos.rsbuttom.RSButtonMetro" name="rSButtonMetro11">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/proyectofinal1/vista/configuracion200.png"/>
+                      <Image iconType="3" name="/proyectofinal1/recursos/img/configuracion200.png"/>
                     </Property>
                     <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
@@ -428,7 +428,7 @@
                 <Component class="proyectofinal1.recursos.rsbuttom.RSButtonMetro" name="rSButtonMetro12">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/proyectofinal1/vista/estadisticas200.png"/>
+                      <Image iconType="3" name="/proyectofinal1/recursos/img/estadisticas200.png"/>
                     </Property>
                     <Property name="opaque" type="boolean" value="false"/>
                   </Properties>

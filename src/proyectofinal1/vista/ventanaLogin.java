@@ -51,7 +51,7 @@ public class ventanaLogin extends javax.swing.JFrame {
         jPanel1.setForeground(new java.awt.Color(21, 243, 203));
 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectofinal1/vista/logonat.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectofinal1/recursos/img/logonat.png"))); // NOI18N
         jLabel1.setText("jLabel1");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
