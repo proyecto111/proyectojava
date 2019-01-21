@@ -39,14 +39,7 @@ public class controladorPrincipal implements ActionListener{
             vp.contenedorFrames.repaint();
             vp.contenedorFrames.validate();
         }
-        if(e.getSource()==vp.botonMenu){
-            if(position>-1){
-            //Animacion.Animacion.mover_izquierda(0, -188, 2, 2, vp.panelMenu);
-            }
-            else{
-            //Animacion.Animacion.mover_derecha(-188,0, 2,2, vp.panelMenu);
-            }
-        }
+       
         
     }
     
