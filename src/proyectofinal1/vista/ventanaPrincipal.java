@@ -18,7 +18,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
      */
     DefaultTableModel md;
     String[][]data={};
-    String[] titulos={"Id","Producto","Cantidad"};
+    String[] titulos={"Id","Producto","Disponible"};
     public ventanaPrincipal() {
         initComponents();
         md = new DefaultTableModel(data, titulos);
@@ -56,11 +56,13 @@ public class ventanaPrincipal extends javax.swing.JFrame {
         rSButtonMetro11 = new proyectofinal1.recursos.rsbuttom.RSButtonMetro();
         rSButtonMetro12 = new proyectofinal1.recursos.rsbuttom.RSButtonMetro();
         panelProduccion = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
+        prod = new javax.swing.JScrollPane();
         tabla = new rojerusan.RSTableMetro();
-        jButton1 = new javax.swing.JButton();
+        botonAgregar = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -269,13 +271,19 @@ public class ventanaPrincipal extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane2.setViewportView(tabla);
+        prod.setViewportView(tabla);
 
-        jButton1.setText("Agregar");
+        botonAgregar.setText("Agregar");
 
         jButton2.setText("Eliminar");
 
         jButton3.setText("modificar");
+
+        jButton4.setText("Detalle");
+
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jLabel1.setText("Produccion");
 
         javax.swing.GroupLayout panelProduccionLayout = new javax.swing.GroupLayout(panelProduccion);
         panelProduccion.setLayout(panelProduccionLayout);
@@ -284,28 +292,40 @@ public class ventanaPrincipal extends javax.swing.JFrame {
             .addGroup(panelProduccionLayout.createSequentialGroup()
                 .addGroup(panelProduccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelProduccionLayout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 746, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelProduccionLayout.createSequentialGroup()
-                        .addGap(143, 143, 143)
-                        .addComponent(jButton3)
-                        .addGap(138, 138, 138)
-                        .addComponent(jButton2)
-                        .addGap(152, 152, 152)
-                        .addComponent(jButton1)))
-                .addContainerGap(80, Short.MAX_VALUE))
+                        .addGap(168, 168, 168)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelProduccionLayout.createSequentialGroup()
+                        .addContainerGap(34, Short.MAX_VALUE)
+                        .addComponent(prod, javax.swing.GroupLayout.PREFERRED_SIZE, 702, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                .addGroup(panelProduccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonAgregar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33))
         );
         panelProduccionLayout.setVerticalGroup(
             panelProduccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelProduccionLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
-                .addGroup(panelProduccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
-                .addGap(77, 77, 77))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1)
+                .addGroup(panelProduccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelProduccionLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                        .addComponent(jButton4)
+                        .addGap(18, 18, 18)
+                        .addComponent(botonAgregar)
+                        .addGap(20, 20, 20)
+                        .addComponent(jButton2)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton3)
+                        .addGap(205, 205, 205))
+                    .addGroup(panelProduccionLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(prod, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         contenedorFrames.add(panelProduccion, "card3");
@@ -400,19 +420,21 @@ public class ventanaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton botonAgregar;
     public proyectofinal1.recursos.rsbuttom.RSButtonMetro botonMenu;
     public proyectofinal1.recursos.rsbuttom.RSButtonMetro botonProduccion;
     public javax.swing.JPanel contenedorFrames;
     public javax.swing.JLabel etiquetaUsuario;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane2;
     public javax.swing.JPanel panelMenu;
     public javax.swing.JPanel panelProduccion;
     public javax.swing.JPanel panelSesion;
+    public javax.swing.JScrollPane prod;
     private proyectofinal1.recursos.rsbuttom.RSButtonMetro rSButtonMetro1;
     private proyectofinal1.recursos.rsbuttom.RSButtonMetro rSButtonMetro11;
     private proyectofinal1.recursos.rsbuttom.RSButtonMetro rSButtonMetro12;
