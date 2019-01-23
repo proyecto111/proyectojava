@@ -5,7 +5,9 @@
         <group>
             <file>file:/F:/proyectojava/src/proyectofinal1/vista/ventanaPrincipal.java</file>
             <file>file:/F:/proyectojava/src/proyectofinal1/vista/ventanaProducto.java</file>
+            <file>file:/F:/proyectojava/src/proyectofinal1/controlador/controladorProduccion.java</file>
             <file>file:/F:/proyectojava/src/proyectofinal1/ProyectoFinal1.java</file>
+            <file>file:/F:/proyectojava/src/proyectofinal1/controlador/controladorPrincipal.java</file>
         </group>
     </open-files>
 </project-private>

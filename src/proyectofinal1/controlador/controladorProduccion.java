@@ -8,17 +8,29 @@ package proyectofinal1.controlador;
 import proyectofinal1.vista.ventanaPrincipal;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import proyectofinal1.vista.ventanaProducto;
 /**
  *
  * @author PC
  */
-public class controladorProduccion {
+public class controladorProduccion implements ActionListener{
     
     private ventanaPrincipal vp;
 
     public controladorProduccion(ventanaPrincipal vp) {
         this.vp = vp;
-        
+        this.vp.botonAgregar.addActionListener(this);
+    }
+    @Override
+    public void actionPerformed(ActionEvent o){
+        if (o.getSource() == vp.botonAgregar) {
+            
+            ventanaProducto vProduct=new ventanaProducto();
+            vProduct.setVisible(true);
+            
+            
+            
+        } 
     }
     
     

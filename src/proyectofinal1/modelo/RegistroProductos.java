@@ -4,7 +4,7 @@ import java.util.List;
 public class RegistroProductos {
 	
 	private InicioSesion s;
-	private List<Productos> ListaProductos;
+	private List<Producto> ListaProductos;
 	
 	public RegistroProductos(){
             
@@ -16,18 +16,18 @@ public class RegistroProductos {
 		this.ListaProductos =new ArrayList<>();
 	}
 
-	public InicioSesion getS() {
+	public InicioSesion getSesion() {
 		return s;
 	}
 
-	public void setS(InicioSesion s) {
+	public void setSesion(InicioSesion s) {
 		this.s = s;
 	}
 	//la lista tiene que tener getter y seter??
-	public void AgregarProducto(Productos p){
+	public void AgregarProducto(Producto p){
 		this.ListaProductos.add(p);
 	}
-	public void QuitarProducto(Productos p){
+	public void QuitarProducto(Producto p){
 		this.ListaProductos.remove(p);
 	}
 	

@@ -29,7 +29,7 @@ public class controladorPrincipal implements ActionListener{
     
     @Override
     public void actionPerformed(ActionEvent e){
-        int position=vp.panelMenu.getX();
+       
         
         if(e.getSource()==vp.botonProduccion){
             vp.contenedorFrames.removeAll();
@@ -38,6 +38,7 @@ public class controladorPrincipal implements ActionListener{
             vp.contenedorFrames.add(vp.panelProduccion);
             vp.contenedorFrames.repaint();
             vp.contenedorFrames.validate();
+            controladorProduccion cprod=new controladorProduccion(vp);
         }
        
         

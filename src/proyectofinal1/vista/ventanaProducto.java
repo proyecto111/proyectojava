@@ -29,15 +29,18 @@ public class ventanaProducto extends javax.swing.JFrame {
 
         panelProductos = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        casillaDescrip = new javax.swing.JTextField();
+        casillaCant = new javax.swing.JTextField();
+        casillaLote = new javax.swing.JTextField();
+        casillacodigo = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        rSDateChooser1 = new rojeru_san.componentes.RSDateChooser();
-        jButton1 = new javax.swing.JButton();
+        selectorFE = new rojeru_san.componentes.RSDateChooser();
+        bAgregProd = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        casillaFV = new javax.swing.JTextField();
+        bGenFV = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,21 +48,21 @@ public class ventanaProducto extends javax.swing.JFrame {
 
         jLabel1.setText("codigoID");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        casillaDescrip.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                casillaDescripActionPerformed(evt);
             }
         });
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        casillaCant.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                casillaCantActionPerformed(evt);
             }
         });
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        casillacodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                casillacodigoActionPerformed(evt);
             }
         });
 
@@ -69,10 +72,14 @@ public class ventanaProducto extends javax.swing.JFrame {
 
         jLabel4.setText("N° de Lote");
 
-        rSDateChooser1.setColorForeground(new java.awt.Color(0, 0, 0));
-        rSDateChooser1.setFuente(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        selectorFE.setColorForeground(new java.awt.Color(0, 0, 0));
+        selectorFE.setFuente(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jButton1.setText("Agregar");
+        bAgregProd.setText("Agregar");
+
+        jLabel5.setText("fecha de venc.");
+
+        bGenFV.setText("generar fecha Venc");
 
         javax.swing.GroupLayout panelProductosLayout = new javax.swing.GroupLayout(panelProductos);
         panelProductos.setLayout(panelProductosLayout);
@@ -84,24 +91,24 @@ public class ventanaProducto extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(jLabel2)
                     .addComponent(jLabel4)
-                    .addComponent(jLabel1))
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelProductosLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(casillaFV)
+                    .addComponent(casillaLote)
+                    .addComponent(casillaCant, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
+                    .addComponent(casillaDescrip, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(casillacodigo))
+                .addGap(32, 32, 32)
+                .addGroup(panelProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(selectorFE, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelProductosLayout.createSequentialGroup()
                         .addGroup(panelProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField4)))
-                    .addGroup(panelProductosLayout.createSequentialGroup()
-                        .addGap(2, 2, 2)
-                        .addComponent(jTextField3)))
-                .addGap(11, 11, 11)
-                .addComponent(rSDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bGenFV)
+                            .addComponent(bAgregProd, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(21, 21, 21)))
                 .addGap(43, 43, 43))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelProductosLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(112, 112, 112))
         );
         panelProductosLayout.setVerticalGroup(
             panelProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -114,23 +121,32 @@ public class ventanaProducto extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelProductosLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(panelProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(rSDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(selectorFE, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(casillacodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)))
-                .addGroup(panelProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addGap(18, 18, 18)
                 .addGroup(panelProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelProductosLayout.createSequentialGroup()
+                        .addGroup(panelProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(casillaDescrip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2))
+                        .addGap(18, 18, 18)
+                        .addGroup(panelProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(casillaCant, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(panelProductosLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(bGenFV)))
                 .addGap(18, 18, 18)
                 .addGroup(panelProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(75, 75, 75))
+                    .addComponent(casillaLote, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addGroup(panelProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(casillaFV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22)
+                .addComponent(bAgregProd)
+                .addGap(17, 17, 17))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -147,17 +163,17 @@ public class ventanaProducto extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void casillacodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casillacodigoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_casillacodigoActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void casillaCantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casillaCantActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_casillaCantActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void casillaDescripActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casillaDescripActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_casillaDescripActionPerformed
 
     /**
      * @param args the command line arguments
@@ -195,16 +211,19 @@ public class ventanaProducto extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    public javax.swing.JButton bAgregProd;
+    public javax.swing.JButton bGenFV;
+    public javax.swing.JTextField casillaCant;
+    public javax.swing.JTextField casillaDescrip;
+    public javax.swing.JTextField casillaFV;
+    public javax.swing.JTextField casillaLote;
+    public javax.swing.JTextField casillacodigo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JPanel panelProductos;
-    private rojeru_san.componentes.RSDateChooser rSDateChooser1;
+    private javax.swing.JLabel jLabel5;
+    public javax.swing.JPanel panelProductos;
+    public rojeru_san.componentes.RSDateChooser selectorFE;
     // End of variables declaration//GEN-END:variables
 }
