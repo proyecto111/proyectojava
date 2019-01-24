@@ -16,13 +16,11 @@ public class ventanaPrincipal extends javax.swing.JFrame {
     /**
      * Creates new form ventanaPrincipal
      */
-    DefaultTableModel md;
-    String[][]data={};
-    String[] titulos={"Id","Producto","Disponible"};
+    public DefaultTableModel md;
+    
     public ventanaPrincipal() {
         initComponents();
-        md = new DefaultTableModel(data, titulos);
-        tabla.setModel(md);
+        
 
     }
 
@@ -268,9 +266,17 @@ public class ventanaPrincipal extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "ID producto", "Descripcion", "Fecha Elab", "Disponible"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
         prod.setViewportView(tabla);
 
         botonAgregar.setText("Agregar");
@@ -443,7 +449,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
     private proyectofinal1.recursos.rsbuttom.RSButtonMetro rSButtonMetro5;
     private proyectofinal1.recursos.rsbuttom.RSButtonMetro rSButtonMetro6;
     private proyectofinal1.recursos.rsbuttom.RSButtonMetro rSButtonMetro7;
-    private rojerusan.RSTableMetro tabla;
+    public rojerusan.RSTableMetro tabla;
     public proyectofinal1.recursos.rsbuttom.RSButtonMetro tarjetaGastos;
     public proyectofinal1.recursos.rsbuttom.RSButtonMetro tarjetaInsumos;
     private proyectofinal1.recursos.rsbuttom.RSButtonMetro tarjetaProduccion;

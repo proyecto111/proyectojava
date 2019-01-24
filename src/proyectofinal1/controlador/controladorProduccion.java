@@ -26,6 +26,7 @@ public class controladorProduccion implements ActionListener{
         if (o.getSource() == vp.botonAgregar) {
             
             ventanaProducto vProduct=new ventanaProducto();
+            controladorVentanaProd cprod=new controladorVentanaProd(vp,vProduct);
             vProduct.setVisible(true);
             
             
