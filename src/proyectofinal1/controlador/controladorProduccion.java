@@ -8,6 +8,7 @@ package proyectofinal1.controlador;
 import proyectofinal1.vista.ventanaPrincipal;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import proyectofinal1.vista.ventanaDetalle;
 import proyectofinal1.vista.ventanaProducto;
 /**
  *
@@ -20,6 +21,7 @@ public class controladorProduccion implements ActionListener{
     public controladorProduccion(ventanaPrincipal vp) {
         this.vp = vp;
         this.vp.botonAgregar.addActionListener(this);
+        this.vp.bDetalleProd.addActionListener(this);
     }
     @Override
     public void actionPerformed(ActionEvent o){
@@ -31,7 +33,15 @@ public class controladorProduccion implements ActionListener{
             
             
             
-        } 
+        }
+        if(o.getSource()==vp.bDetalleProd){
+            ventanaDetalle vDet=new ventanaDetalle();
+            vDet.titulo.setText("Detalle Producto");
+            vDet.setTitle("Detalle Producto");
+            
+            
+            vDet.setVisible(true);
+        }
     }
     
     

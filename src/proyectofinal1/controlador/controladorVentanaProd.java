@@ -23,8 +23,8 @@ import proyectofinal1.vista.ventanaProducto;
 public class controladorVentanaProd implements ActionListener {
     private ventanaPrincipal vp;
     private ventanaProducto subVent;
-    private Producto prod;
-    private Envase env;
+    
+    
 
     public controladorVentanaProd(ventanaPrincipal vp,ventanaProducto subVent) {
         this.vp=vp;
@@ -38,7 +38,8 @@ public class controladorVentanaProd implements ActionListener {
        
        if (a.getSource()==subVent.bAgregProd){
            try{
-           String cod = subVent.casillacodigo.getText();
+           String nomP=subVent.casillaNomP.getText();
+           String codProd = subVent.casillacodigo.getText();
            String des = subVent.casillaDescrip.getText();
            int can = Integer.parseInt(subVent.casillaCant.getText());
            
@@ -46,15 +47,18 @@ public class controladorVentanaProd implements ActionListener {
            String lo = subVent.casillaLote.getText();
            Date fe = subVent.selectorFE.getDatoFecha();
            
-           String[] fn = generarFila(cod,des,fe,can);
-           System.out.println("genero fila");
+           String[] fn = generarFila(codProd,des,fe,can);
+           
            DefaultTableModel mdp = (DefaultTableModel) vp.tabla.getModel();
            mdp.addRow(fn);
+           //genero objeto producto
+           Producto Prod=new Producto();
+           
 
            subVent.dispose();
            }
            catch(Exception e){
-               System.out.println("Datos incompletos");
+               System.out.println("Datos incompletos o incorrectos");
            }
            
        }
@@ -89,8 +93,31 @@ public class controladorVentanaProd implements ActionListener {
         filanueva[2]=formatearFecha(f);
         
         filanueva[3]=String.valueOf(cnt);
-        System.out.println("anda");
+        
         return filanueva;
     }
-    
+    public void generarEnvases(String descrip,String np, Date felab, Date fVenc,int cant,Producto p){
+        String[] cods = generarCodigos(cant);
+        p.setDescripcion(descrip);
+        p.setNombreProducto(np);
+        p.setStock(cant);
+        for (int i = 0; i <= cant; i++ ){
+            //GENERO ENVASE
+            Envase env=new Envase(cods[i],felab,fVenc);
+            //AGREGO ENVASE A LA LISTA DE PRODUCTOS
+            p.AgregarEnvase(env);
+        }
+    }
+    public String[] generarCodigos(int cant){
+        String codigos[]=new String[cant]; 
+        for (int i=0;i<=cant;i++){
+            //por el momentos genera numeros aleatorios
+            codigos[i]=Integer.toString(generarAleatorios(cant));
+        }
+        return codigos;
+    }
+    public int generarAleatorios(int cant){
+        int numero=(int)(Math.random()*cant)+1;
+        return numero;
+    }
 }

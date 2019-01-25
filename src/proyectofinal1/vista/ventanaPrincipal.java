@@ -59,7 +59,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
         botonAgregar = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        bDetalleProd = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -260,10 +260,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
 
         tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
                 "ID producto", "Descripcion", "Fecha Elab", "Disponible"
@@ -285,7 +282,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
 
         jButton3.setText("modificar");
 
-        jButton4.setText("Detalle");
+        bDetalleProd.setText("Detalle");
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
@@ -309,7 +306,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
                     .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botonAgregar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(bDetalleProd, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(33, 33, 33))
         );
         panelProduccionLayout.setVerticalGroup(
@@ -320,7 +317,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
                 .addGroup(panelProduccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelProduccionLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                        .addComponent(jButton4)
+                        .addComponent(bDetalleProd)
                         .addGap(18, 18, 18)
                         .addComponent(botonAgregar)
                         .addGap(20, 20, 20)
@@ -426,6 +423,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton bDetalleProd;
     public javax.swing.JButton botonAgregar;
     public proyectofinal1.recursos.rsbuttom.RSButtonMetro botonMenu;
     public proyectofinal1.recursos.rsbuttom.RSButtonMetro botonProduccion;
@@ -433,7 +431,6 @@ public class ventanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JLabel etiquetaUsuario;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

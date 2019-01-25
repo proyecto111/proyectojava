@@ -15,13 +15,13 @@ public class Envase {
     private String idEnvase;
     private Date fechaElab;
     private Date fechaVenc;
-    private String Descripcion;
+   
 
-    public Envase(String idEnvase, Date fechaElab, Date fechaVenc, String Descripcion) {
+    public Envase(String idEnvase, Date fechaElab, Date fechaVenc) {
         this.idEnvase = idEnvase;
         this.fechaElab = fechaElab;
         this.fechaVenc = fechaVenc;
-        this.Descripcion = Descripcion;
+        
     }
 
     public String getIdEnvase() {
