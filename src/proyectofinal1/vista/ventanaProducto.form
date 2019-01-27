@@ -66,20 +66,27 @@
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="casillaLote" max="32767" attributes="0"/>
-                      <Component id="casillaCant" alignment="0" pref="172" max="32767" attributes="0"/>
+                      <Component id="casillaCant" alignment="0" pref="167" max="32767" attributes="0"/>
                       <Component id="casillaDescrip" alignment="1" max="32767" attributes="0"/>
                       <Component id="casillacodigo" alignment="0" max="32767" attributes="0"/>
                       <Component id="casillaNomP" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="bAgregProd" min="-2" pref="150" max="-2" attributes="0"/>
-                      <Component id="selectorFE" min="-2" pref="219" max="-2" attributes="0"/>
-                      <Component id="casillaFV" alignment="0" min="-2" pref="185" max="-2" attributes="0"/>
-                      <Component id="bGenFV" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="bAgregProd" min="-2" pref="150" max="-2" attributes="0"/>
+                              <Component id="casillaFV" alignment="0" min="-2" pref="185" max="-2" attributes="0"/>
+                              <Component id="bGenFV" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="selectorFE" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -88,13 +95,13 @@
               <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="selectorFE" min="-2" pref="24" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="casillacodigo" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <Component id="selectorFE" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -174,20 +181,6 @@
             <Property name="text" type="java.lang.String" value="N&#xb0; de Lote"/>
           </Properties>
         </Component>
-        <Component class="rojeru_san.componentes.RSDateChooser" name="selectorFE">
-          <Properties>
-            <Property name="colorForeground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
-            <Property name="formatoFecha" type="java.lang.String" value="dd/MM/yyyy"/>
-            <Property name="fuente" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="12" style="0"/>
-            </Property>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-          </AuxValues>
-        </Component>
         <Component class="javax.swing.JButton" name="bAgregProd">
           <Properties>
             <Property name="text" type="java.lang.String" value="Agregar"/>
@@ -220,6 +213,14 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="casillaNomP">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
+        </Component>
+        <Component class="rojeru_san.componentes.RSDateChooser" name="selectorFE">
+          <Properties>
+            <Property name="formatoFecha" type="java.lang.String" value="dd/MM/yyyy"/>
+          </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>

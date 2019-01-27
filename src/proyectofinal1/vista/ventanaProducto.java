@@ -36,13 +36,13 @@ public class ventanaProducto extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        selectorFE = new rojeru_san.componentes.RSDateChooser();
         bAgregProd = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         casillaFV = new javax.swing.JTextField();
         bGenFV = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         casillaNomP = new javax.swing.JTextField();
+        selectorFE = new rojeru_san.componentes.RSDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -74,10 +74,6 @@ public class ventanaProducto extends javax.swing.JFrame {
 
         jLabel4.setText("N° de Lote");
 
-        selectorFE.setColorForeground(new java.awt.Color(0, 0, 0));
-        selectorFE.setFormatoFecha("dd/MM/yyyy");
-        selectorFE.setFuente(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-
         bAgregProd.setText("Agregar");
 
         jLabel5.setText("fecha de venc.");
@@ -85,6 +81,8 @@ public class ventanaProducto extends javax.swing.JFrame {
         bGenFV.setText("generar fecha Venc");
 
         jLabel6.setText("Nombre");
+
+        selectorFE.setFormatoFecha("dd/MM/yyyy");
 
         javax.swing.GroupLayout panelProductosLayout = new javax.swing.GroupLayout(panelProductos);
         panelProductos.setLayout(panelProductosLayout);
@@ -106,29 +104,33 @@ public class ventanaProducto extends javax.swing.JFrame {
                         .addGap(21, 21, 21)))
                 .addGroup(panelProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(casillaLote)
-                    .addComponent(casillaCant, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
+                    .addComponent(casillaCant, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE)
                     .addComponent(casillaDescrip, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(casillacodigo)
                     .addComponent(casillaNomP))
-                .addGap(32, 32, 32)
                 .addGroup(panelProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bAgregProd, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(selectorFE, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(casillaFV, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bGenFV)
-                    .addComponent(jLabel5))
-                .addGap(12, 12, 12))
+                    .addGroup(panelProductosLayout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addGroup(panelProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(bAgregProd, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(casillaFV, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bGenFV)
+                            .addComponent(jLabel5)))
+                    .addGroup(panelProductosLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(selectorFE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         panelProductosLayout.setVerticalGroup(
             panelProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelProductosLayout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addGroup(panelProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(selectorFE, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel1)
-                        .addComponent(casillacodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(22, 22, 22)
+                        .addComponent(casillacodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(selectorFE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jLabel6)
