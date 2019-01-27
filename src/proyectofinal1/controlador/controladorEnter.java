@@ -57,6 +57,7 @@ public class controladorEnter implements KeyListener{
             controladorPrincipal cp=new controladorPrincipal(us,vp);
             vp.setVisible(true);
             
+            v.dispose();
             
         }
         if(ses.isIniciado()==true){

@@ -44,6 +44,7 @@ public class controladorLogin implements ActionListener{
             ses.setIniciado(true);
             ventanaPrincipal vp=new ventanaPrincipal();
             controladorPrincipal cp=new controladorPrincipal(us,vp);
+            
             vp.setVisible(true);
             vp.contenedorFrames.removeAll();
             vp.contenedorFrames.repaint();
@@ -52,7 +53,7 @@ public class controladorLogin implements ActionListener{
             vp.contenedorFrames.repaint();
             vp.contenedorFrames.validate();
             
-            
+            v.dispose();
             
         }
         if(ses.isIniciado()==true){
