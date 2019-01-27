@@ -47,7 +47,7 @@ public class controladorEnter implements KeyListener{
        String u=v.casillaIngreso.getText().trim();
         String p=v.casillaPass.getText().trim();
         Date fecha=new Date();
-        if("armando".equals(u) && "1234".equals(p) && key==KeyEvent.VK_ENTER){
+        if("qwe".equals(u) && "123".equals(p) && key==KeyEvent.VK_ENTER){
             us.setNombre(u);
             us.setContraseña(p);
             ses.setU(us);

@@ -17,6 +17,7 @@ public class ventanaLogin extends javax.swing.JFrame {
     public ventanaLogin() {
         
         initComponents();
+         this.setResizable(false);
     }
 
     /**

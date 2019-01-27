@@ -33,10 +33,11 @@ public class controladorLogin implements ActionListener{
     
     @Override
     public void actionPerformed(ActionEvent e){
+        this.v.casillaIngreso.requestFocus();
         String u=v.casillaIngreso.getText().trim();
         String p=v.casillaPass.getText().trim();
         Date fecha=new Date();
-        if("armando".equals(u) && "1234".equals(p) && e.getSource()==v.botonIniciar){
+        if("qwe".equals(u) && "123".equals(p) && e.getSource()==v.botonIniciar){
             us.setNombre(u);
             us.setContraseña(p);
             ses.setU(us);
