@@ -9,15 +9,18 @@ public class Producto {
 	private int Stock;
         private List<Envase> listaEnvases;
         private String Descripcion;
+        private String Lote;
 	
-	public Producto(){
-		
-	}
+	   public Producto() {
+        
+    }
 
-    public Producto(String nombreProducto, String Idproducto, int Stock) {
+    public Producto(String nombreProducto, String Idproducto, String Descripcion,String Lote) {
         this.nombreProducto = nombreProducto;
         this.Idproducto = Idproducto;
-        this.Stock = Stock;
+        
+        this.Lote=Lote;
+        this.Descripcion=Descripcion;
         this.listaEnvases =new ArrayList<>();
     }
 
@@ -38,7 +41,9 @@ public class Producto {
     }
 
     public int getStock() {
-        return Stock;
+        
+        return this.listaEnvases.size();
+        
     }
 
     public void setStock(int Stock) {
@@ -56,6 +61,14 @@ public class Producto {
 
     public void setDescripcion(String Descripcion) {
         this.Descripcion = Descripcion;
+    }
+
+    public String getLote() {
+        return Lote;
+    }
+
+    public void setLote(String Lote) {
+        this.Lote = Lote;
     }
 
     

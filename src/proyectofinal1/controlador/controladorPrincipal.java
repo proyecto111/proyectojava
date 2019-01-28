@@ -8,6 +8,7 @@ package proyectofinal1.controlador;
 import proyectofinal1.vista.ventanaPrincipal;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import proyectofinal1.modelo.RegistroProductos;
 import proyectofinal1.modelo.Usuario;
 /**
  *
@@ -15,16 +16,23 @@ import proyectofinal1.modelo.Usuario;
  */
 public class controladorPrincipal implements ActionListener{
     
-    private final ventanaPrincipal vp;
-    private final Usuario u;
+    private  ventanaPrincipal vp;
+    private  Usuario u;
+    private  RegistroProductos regProd; 
     
     
     public controladorPrincipal(Usuario u,ventanaPrincipal vp){
         this.vp=vp;
         this.u=u;
+        
+        
+        //listeners
         this.vp.botonMenu.addActionListener(this);
         this.vp.etiquetaUsuario.setText(u.getNombre());
         this.vp.botonProduccion.addActionListener(this);
+        
+        //registros
+        this.regProd=new RegistroProductos();
     }
     
     @Override
@@ -38,7 +46,7 @@ public class controladorPrincipal implements ActionListener{
             vp.contenedorFrames.add(vp.panelProduccion);
             vp.contenedorFrames.repaint();
             vp.contenedorFrames.validate();
-            controladorProduccion cprod=new controladorProduccion(vp);
+            controladorProduccion cprod=new controladorProduccion(vp,regProd);
         }
        
         

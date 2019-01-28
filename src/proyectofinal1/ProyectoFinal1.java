@@ -5,13 +5,11 @@
  */
 package proyectofinal1;
 
-import proyectofinal1.controlador.controladorEnter;
+
 import proyectofinal1.controlador.controladorLogin;
-import proyectofinal1.controlador.controladorPrincipal;
 import proyectofinal1.modelo.InicioSesion;
 import proyectofinal1.modelo.Usuario;
 import proyectofinal1.vista.ventanaLogin;
-import proyectofinal1.vista.ventanaPrincipal;
 
 /**
  *
@@ -26,7 +24,7 @@ public class ProyectoFinal1 {
         Usuario u=new Usuario();
         InicioSesion s=new InicioSesion();
         ventanaLogin v=new ventanaLogin();
-         controladorEnter c2=new controladorEnter(u,s,v);
+       
         controladorLogin c=new controladorLogin(u,s,v);
        
         v.setLocationRelativeTo(null);

@@ -8,6 +8,7 @@ package proyectofinal1.controlador;
 import proyectofinal1.vista.ventanaPrincipal;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import proyectofinal1.modelo.RegistroProductos;
 import proyectofinal1.vista.ventanaDetalle;
 import proyectofinal1.vista.ventanaProducto;
 /**
@@ -17,9 +18,11 @@ import proyectofinal1.vista.ventanaProducto;
 public class controladorProduccion implements ActionListener{
     
     private ventanaPrincipal vp;
+     private RegistroProductos regprod;
 
-    public controladorProduccion(ventanaPrincipal vp) {
+    public controladorProduccion(ventanaPrincipal vp,RegistroProductos regprod) {
         this.vp = vp;
+        this.regprod=regprod;
         this.vp.botonAgregar.addActionListener(this);
         this.vp.bDetalleProd.addActionListener(this);
     }
@@ -28,7 +31,7 @@ public class controladorProduccion implements ActionListener{
         if (o.getSource() == vp.botonAgregar) {
             
             ventanaProducto vProduct=new ventanaProducto();
-            controladorVentanaProd cprod=new controladorVentanaProd(vp,vProduct);
+            controladorVentanaProd cprod=new controladorVentanaProd(vp,vProduct,regprod);
             vProduct.setVisible(true);
             
             

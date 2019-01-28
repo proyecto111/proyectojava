@@ -13,6 +13,7 @@ import java.util.Date;
 import javax.swing.table.DefaultTableModel;
 import proyectofinal1.modelo.Envase;
 import proyectofinal1.modelo.Producto;
+import proyectofinal1.modelo.RegistroProductos;
 import proyectofinal1.vista.ventanaPrincipal;
 import proyectofinal1.vista.ventanaProducto;
 
@@ -23,49 +24,68 @@ import proyectofinal1.vista.ventanaProducto;
 public class controladorVentanaProd implements ActionListener {
     private ventanaPrincipal vp;
     private ventanaProducto subVent;
+    private Producto P;
+    private RegistroProductos regprod;
     
     
 
-    public controladorVentanaProd(ventanaPrincipal vp,ventanaProducto subVent) {
+    public controladorVentanaProd(ventanaPrincipal vp,ventanaProducto subVent,RegistroProductos regprod) {
         this.vp=vp;
         this.subVent = subVent;
+        this.regprod=regprod;
         this.subVent.bAgregProd.addActionListener(this);
         this.subVent.bGenFV.addActionListener(this);
+        
     }
 
    @Override
    public void actionPerformed(ActionEvent a){
        
+       Date fv=new Date();
+       
        if (a.getSource()==subVent.bAgregProd){
-           try{
+           
+               
+           //tomo datos de las casillas
            String nomP=subVent.casillaNomP.getText();
            String codProd = subVent.casillacodigo.getText();
            String des = subVent.casillaDescrip.getText();
+           
            int can = Integer.parseInt(subVent.casillaCant.getText());
            
 
            String lo = subVent.casillaLote.getText();
            Date fe = subVent.selectorFE.getDatoFecha();
+           //creo producto
+           
+           this.P=new Producto(nomP,codProd,des,lo);
+           
+           System.out.println("genera producto");
+           
+           //genero envases
+           generarEnvases(P,fe,fv);
+           System.out.println("genera envases");
+           //agrego producto al registro
+           regprod.AgregarProducto(P);
+           //genero fila para agregar
            
            String[] fn = generarFila(codProd,des,fe,can);
-           
+           //genero modelo de tabla
            DefaultTableModel mdp = (DefaultTableModel) vp.tabla.getModel();
+           //agrego fila a la tabla
            mdp.addRow(fn);
-           //genero objeto producto
-           Producto Prod=new Producto();
+           //
+           
            
 
            subVent.dispose();
-           }
-           catch(Exception e){
-               System.out.println("Datos incompletos o incorrectos");
-           }
+     
            
        }
        if(a.getSource()==subVent.bGenFV){
            Date fe = subVent.selectorFE.getDatoFecha();
-           Date fv=generarFechaVencim(fe,6);
-          
+           fv=generarFechaVencim(fe,6);
+           
            subVent.casillaFV.setText(formatearFecha(fv));
            
        }
@@ -96,28 +116,38 @@ public class controladorVentanaProd implements ActionListener {
         
         return filanueva;
     }
-    public void generarEnvases(String descrip,String np, Date felab, Date fVenc,int cant,Producto p){
-        String[] cods = generarCodigos(cant);
-        p.setDescripcion(descrip);
-        p.setNombreProducto(np);
-        p.setStock(cant);
-        for (int i = 0; i <= cant; i++ ){
+    public void generarEnvases(Producto p,Date fechaelab,Date fechavencim){
+        //genero envases
+        String[] cods = generarCodigos(p.getStock());
+        
+        
+        
+        
+        for (int i = 0; i <p.getStock(); i++ ){
+            
             //GENERO ENVASE
-            Envase env=new Envase(cods[i],felab,fVenc);
+            Envase env=new Envase(cods[i],fechaelab,fechavencim);
             //AGREGO ENVASE A LA LISTA DE PRODUCTOS
             p.AgregarEnvase(env);
         }
     }
     public String[] generarCodigos(int cant){
-        String codigos[]=new String[cant]; 
-        for (int i=0;i<=cant;i++){
+        //FUNCIONA BIEN
+        String[] codigos=new String[cant];
+    
+        for (int i=0;i<cant;i++){
             //por el momentos genera numeros aleatorios
-            codigos[i]=Integer.toString(generarAleatorios(cant));
+            codigos[i]=Integer.toString(generarAleatorios());
+            
+            
         }
+        
         return codigos;
+        
     }
-    public int generarAleatorios(int cant){
-        int numero=(int)(Math.random()*cant)+1;
+    public int generarAleatorios(){
+        //FUNCIONA BIEN
+        int numero=(int)(Math.random()*100)+1;
         return numero;
     }
 }
